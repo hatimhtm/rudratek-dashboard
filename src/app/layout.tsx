@@ -22,8 +22,13 @@ export default function RootLayout({
                 <ThemeProvider>
                     <div className="flex min-h-screen bg-neutral-50 dark:bg-neutral-950">
                         <Sidebar />
-                        <div className="flex-1 md:ml-64 transition-[margin] duration-200 ease-in-out pb-20 md:pb-0">
-                            {children}
+                        <div className="flex-1 md:ml-64 transition-[margin] duration-200 ease-in-out pb-20 md:pb-0 relative">
+                            {/* Sticky Top Blur - Mobile & Desktop */}
+                            <div className="fixed top-0 left-0 md:left-64 right-0 h-8 bg-gradient-to-b from-neutral-50/90 to-transparent dark:from-neutral-950/90 dark:to-transparent backdrop-blur-sm z-30 pointer-events-none" />
+
+                            <div className="pt-8">
+                                {children}
+                            </div>
                         </div>
                     </div>
                 </ThemeProvider>
