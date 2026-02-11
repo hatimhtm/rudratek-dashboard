@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #171717;
+  --background: #ffffff;
+}
+
+.dark {
+  --foreground: #ededed;
+  --background: #0a0a0a;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Glassmorphism utility */
+  .glass {
+    @apply bg-white/70 dark:bg-black/70 backdrop-blur-lg border border-neutral-200 dark:border-neutral-800;
+  }
+  
+  /* Custom Scrollbar for Webkit */
+  .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+  }
+  
+  .scrollbar-default::-webkit-scrollbar {
+      width: 6px;
+  }
+  
+  .scrollbar-default::-webkit-scrollbar-track {
+      background: transparent;
+  }
+  
+  .scrollbar-default::-webkit-scrollbar-thumb {
+      @apply bg-neutral-300 dark:bg-neutral-700 rounded-full;
+  }
+}

@@ -1,0 +1,122 @@
+[
+    {
+        "id": "proj-001",
+        "name": "E-Commerce Platform Redesign",
+        "clientName": "TechVista Solutions",
+        "status": "Active",
+        "startDate": "2025-01-15",
+        "endDate": "2025-06-30",
+        "budget": 125000,
+        "description": "Complete overhaul of the legacy e-commerce platform to improve conversion rates and mobile responsiveness. Includes migration to a headless CMS architecture."
+    },
+    {
+        "id": "proj-002",
+        "name": "Mobile Banking App - iOS",
+        "clientName": "FinSafe Bank",
+        "status": "On Hold",
+        "startDate": "2024-11-01",
+        "endDate": null,
+        "budget": 85000,
+        "description": "Native iOS application development for secure banking transactions. Currently paused pending security compliance review."
+    },
+    {
+        "id": "proj-003",
+        "name": "Corporate Intranet Portal",
+        "clientName": "Global Logistics Co.",
+        "status": "Completed",
+        "startDate": "2024-06-01",
+        "endDate": "2024-12-15",
+        "budget": 60000,
+        "description": "Internal communication hub for employees, featuring document management, news feed, and HR integrations."
+    },
+    {
+        "id": "proj-004",
+        "name": "AI-Powered Analytics Dashboard",
+        "clientName": "DataFlow Systems",
+        "status": "Active",
+        "startDate": "2025-02-01",
+        "endDate": "2025-08-01",
+        "budget": 150000,
+        "description": "Real-time data visualization dashboard integrating machine learning models for predictive analytics."
+    },
+    {
+        "id": "proj-005",
+        "name": "Healthcare Patient Management System Migration",
+        "clientName": "Wellness Health Group",
+        "status": "Active",
+        "startDate": "2025-03-10",
+        "endDate": "2025-12-20",
+        "budget": 210000,
+        "description": "Large-scale migration of patient records to a cloud-based HIPAA-compliant system. Critical focus on data integrity and security."
+    },
+    {
+        "id": "proj-006",
+        "name": "Marketing Campaign Landing Pages",
+        "clientName": "GrowthHackers Agency",
+        "status": "Completed",
+        "startDate": "2025-01-05",
+        "endDate": "2025-01-25",
+        "budget": 15000,
+        "description": "High-speed, SEO-optimized landing pages for Q1 marketing campaigns. Built with Next.js for performance."
+    },
+    {
+        "id": "proj-007",
+        "name": "Supply Chain Tracking API",
+        "clientName": "LogiTrack Inc.",
+        "status": "Active",
+        "startDate": "2025-02-15",
+        "endDate": "2025-05-30",
+        "budget": 45000,
+        "description": "RESTful API development for tracking shipment status across multiple carriers in real-time."
+    },
+    {
+        "id": "proj-008",
+        "name": "Educational Learning Management System (LMS)",
+        "clientName": "EduFuture Academy",
+        "status": "On Hold",
+        "startDate": "2024-09-01",
+        "endDate": "2025-03-01",
+        "budget": 95000,
+        "description": "Platform for online courses, student progress tracking, and automated grading. Paused for curriculum restructuring."
+    },
+    {
+        "id": "proj-009",
+        "name": "Smart Home IoT Controller Firmware",
+        "clientName": "HomeSmart Tech",
+        "status": "Active",
+        "startDate": "2025-01-20",
+        "endDate": "2025-07-15",
+        "budget": 110000,
+        "description": "Embedded firmware development for the next-generation smart home hub. Focus on low-latency communication with Zigbee devices."
+    },
+    {
+        "id": "proj-010",
+        "name": "Legacy CRM Database Cleanup",
+        "clientName": "SalesForce Dynamics",
+        "status": "Completed",
+        "startDate": "2024-10-01",
+        "endDate": "2024-11-30",
+        "budget": 25000,
+        "description": "Data sanitation and deduplication project for a 10-year-old CRM database. successfully improved query performance by 40%."
+    },
+    {
+        "id": "proj-011",
+        "name": "Virtual Reality Showroom Experience",
+        "clientName": "Modern Living Furniture",
+        "status": "Active",
+        "startDate": "2025-03-01",
+        "endDate": "2025-09-01",
+        "budget": 180000,
+        "description": "Immersive VR experience for customers to visualize furniture in their homes. WebXR based implementation."
+    },
+    {
+        "id": "proj-012",
+        "name": "Blockchain Identity Verification Prototype",
+        "clientName": "SecureID Labs",
+        "status": "On Hold",
+        "startDate": "2024-12-01",
+        "endDate": null,
+        "budget": 70000,
+        "description": "Decentralized identity proof-of-concept using Ethereum. Awaiting regulatory clarity before proceeding to production."
+    }
+]
