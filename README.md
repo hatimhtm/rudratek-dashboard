@@ -55,7 +55,7 @@ Built with a focus on **performance**, **maintainability**, and **clean code**:
 
 ## 🎨 Design Philosophy
 
-The interface adheres to a **"Luxury Neo-Brutalist"** aesthetic:
+The interface adheres to a **"Minimalist Luxury"** aesthetic:
 *   **Typography**: Inter (Google Fonts) for readability and modern feel.
 *   **Palette**: High-contrast monochrome base with subtle semantic colors.
 *   **Motion**: Purposeful animations (slide-ins, fades) guide user attention without distraction.
