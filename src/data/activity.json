@@ -1,0 +1,12 @@
+[
+  { "id": "a1",  "projectId": "proj-001", "type": "milestone","actor": "Sara Mehta",    "summary": "marked “Checkout funnel ships to staging” as done",      "timestamp": "2025-05-09T16:30:00Z" },
+  { "id": "a2",  "projectId": "proj-004", "type": "comment",  "actor": "Kai Yamamoto",  "summary": "added a note on the model retrain cron schedule",        "timestamp": "2025-05-09T14:22:00Z" },
+  { "id": "a3",  "projectId": "proj-008", "type": "task",     "actor": "Adaeze Nwosu",  "summary": "completed “Voice activity detection tuning”",            "timestamp": "2025-05-09T11:05:00Z" },
+  { "id": "a4",  "projectId": "proj-012", "type": "milestone","actor": "Ines Caron",    "summary": "shipped “Form components shipped”",                      "timestamp": "2025-05-09T09:40:00Z" },
+  { "id": "a5",  "projectId": "proj-005", "type": "comment",  "actor": "Clémence Vidal","summary": "uploaded the latest brand-system Figma frames",          "timestamp": "2025-05-08T18:22:00Z" },
+  { "id": "a6",  "projectId": "proj-001", "type": "status",   "actor": "James Park",    "summary": "moved progress to 64% after the checkout merge",          "timestamp": "2025-05-08T14:22:00Z" },
+  { "id": "a7",  "projectId": "proj-011", "type": "task",     "actor": "Mei Lin",       "summary": "scheduled Test #1 for Friday morning",                   "timestamp": "2025-05-08T08:05:00Z" },
+  { "id": "a8",  "projectId": "proj-006", "type": "comment",  "actor": "Imran Chowdhury","summary": "asked for Okta SCIM credentials from the IT team",      "timestamp": "2025-05-06T15:50:00Z" },
+  { "id": "a9",  "projectId": "proj-004", "type": "milestone","actor": "Ana Beltran",   "summary": "closed “Anomaly model v1”",                              "timestamp": "2025-05-05T13:11:00Z" },
+  { "id": "a10", "projectId": "proj-002", "type": "status",   "actor": "Noah Bennett",  "summary": "flagged compliance audit ETA pushed to August",         "timestamp": "2025-04-12T09:05:00Z" }
+]

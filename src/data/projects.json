@@ -1,122 +1,384 @@
 [
-    {
-        "id": "proj-001",
-        "name": "E-Commerce Platform Redesign",
-        "clientName": "TechVista Solutions",
-        "status": "Active",
-        "startDate": "2025-01-15",
-        "endDate": "2025-06-30",
-        "budget": 125000,
-        "description": "Complete overhaul of the legacy e-commerce platform to improve conversion rates and mobile responsiveness. Includes migration to a headless CMS architecture."
-    },
-    {
-        "id": "proj-002",
-        "name": "Mobile Banking App - iOS",
-        "clientName": "FinSafe Bank",
-        "status": "On Hold",
-        "startDate": "2024-11-01",
-        "endDate": null,
-        "budget": 85000,
-        "description": "Native iOS application development for secure banking transactions. Currently paused pending security compliance review."
-    },
-    {
-        "id": "proj-003",
-        "name": "Corporate Intranet Portal",
-        "clientName": "Global Logistics Co.",
-        "status": "Completed",
-        "startDate": "2024-06-01",
-        "endDate": "2024-12-15",
-        "budget": 60000,
-        "description": "Internal communication hub for employees, featuring document management, news feed, and HR integrations."
-    },
-    {
-        "id": "proj-004",
-        "name": "AI-Powered Analytics Dashboard",
-        "clientName": "DataFlow Systems",
-        "status": "Active",
-        "startDate": "2025-02-01",
-        "endDate": "2025-08-01",
-        "budget": 150000,
-        "description": "Real-time data visualization dashboard integrating machine learning models for predictive analytics."
-    },
-    {
-        "id": "proj-005",
-        "name": "Healthcare Patient Management System Migration",
-        "clientName": "Wellness Health Group",
-        "status": "Active",
-        "startDate": "2025-03-10",
-        "endDate": "2025-12-20",
-        "budget": 210000,
-        "description": "Large-scale migration of patient records to a cloud-based HIPAA-compliant system. Critical focus on data integrity and security."
-    },
-    {
-        "id": "proj-006",
-        "name": "Marketing Campaign Landing Pages",
-        "clientName": "GrowthHackers Agency",
-        "status": "Completed",
-        "startDate": "2025-01-05",
-        "endDate": "2025-01-25",
-        "budget": 15000,
-        "description": "High-speed, SEO-optimized landing pages for Q1 marketing campaigns. Built with Next.js for performance."
-    },
-    {
-        "id": "proj-007",
-        "name": "Supply Chain Tracking API",
-        "clientName": "LogiTrack Inc.",
-        "status": "Active",
-        "startDate": "2025-02-15",
-        "endDate": "2025-05-30",
-        "budget": 45000,
-        "description": "RESTful API development for tracking shipment status across multiple carriers in real-time."
-    },
-    {
-        "id": "proj-008",
-        "name": "Educational Learning Management System (LMS)",
-        "clientName": "EduFuture Academy",
-        "status": "On Hold",
-        "startDate": "2024-09-01",
-        "endDate": "2025-03-01",
-        "budget": 95000,
-        "description": "Platform for online courses, student progress tracking, and automated grading. Paused for curriculum restructuring."
-    },
-    {
-        "id": "proj-009",
-        "name": "Smart Home IoT Controller Firmware",
-        "clientName": "HomeSmart Tech",
-        "status": "Active",
-        "startDate": "2025-01-20",
-        "endDate": "2025-07-15",
-        "budget": 110000,
-        "description": "Embedded firmware development for the next-generation smart home hub. Focus on low-latency communication with Zigbee devices."
-    },
-    {
-        "id": "proj-010",
-        "name": "Legacy CRM Database Cleanup",
-        "clientName": "SalesForce Dynamics",
-        "status": "Completed",
-        "startDate": "2024-10-01",
-        "endDate": "2024-11-30",
-        "budget": 25000,
-        "description": "Data sanitation and deduplication project for a 10-year-old CRM database. successfully improved query performance by 40%."
-    },
-    {
-        "id": "proj-011",
-        "name": "Virtual Reality Showroom Experience",
-        "clientName": "Modern Living Furniture",
-        "status": "Active",
-        "startDate": "2025-03-01",
-        "endDate": "2025-09-01",
-        "budget": 180000,
-        "description": "Immersive VR experience for customers to visualize furniture in their homes. WebXR based implementation."
-    },
-    {
-        "id": "proj-012",
-        "name": "Blockchain Identity Verification Prototype",
-        "clientName": "SecureID Labs",
-        "status": "On Hold",
-        "startDate": "2024-12-01",
-        "endDate": null,
-        "budget": 70000,
-        "description": "Decentralized identity proof-of-concept using Ethereum. Awaiting regulatory clarity before proceeding to production."
-    }
+  {
+    "id": "proj-001",
+    "name": "E-Commerce Platform Redesign",
+    "clientName": "TechVista Solutions",
+    "status": "Active",
+    "priority": "High",
+    "startDate": "2025-01-15",
+    "endDate": "2025-06-30",
+    "budget": 125000,
+    "spent": 82500,
+    "progress": 64,
+    "description": "Complete overhaul of the legacy e-commerce platform to improve conversion rates and mobile responsiveness. Includes migration to a headless CMS architecture, a redesigned checkout funnel, and an analytics layer to track add-to-cart drop-off.",
+    "team": [
+      { "id": "u1", "name": "Sara Mehta",     "role": "Project Lead",   "avatarColor": "6366F1" },
+      { "id": "u2", "name": "James Park",     "role": "Senior Engineer","avatarColor": "EC4899" },
+      { "id": "u3", "name": "Yuki Tanaka",    "role": "Product Design", "avatarColor": "10B981" },
+      { "id": "u4", "name": "Diego Alvarez",  "role": "Engineer",       "avatarColor": "F59E0B" },
+      { "id": "u5", "name": "Priya Kapoor",   "role": "QA",             "avatarColor": "06B6D4" }
+    ],
+    "milestones": [
+      { "id": "m1", "title": "Information architecture sign-off", "dueDate": "2025-02-15", "done": true  },
+      { "id": "m2", "title": "Component library locked",          "dueDate": "2025-03-15", "done": true  },
+      { "id": "m3", "title": "Checkout funnel ships to staging",  "dueDate": "2025-05-01", "done": true  },
+      { "id": "m4", "title": "Headless CMS migration",            "dueDate": "2025-06-01", "done": false },
+      { "id": "m5", "title": "Production launch",                 "dueDate": "2025-06-30", "done": false }
+    ],
+    "tasks": [
+      { "id": "t1", "title": "Redesign product detail page", "done": true  },
+      { "id": "t2", "title": "Implement guest checkout",     "done": true  },
+      { "id": "t3", "title": "Wire Algolia search",          "done": true  },
+      { "id": "t4", "title": "Stripe payment plans",         "done": false },
+      { "id": "t5", "title": "Performance budget < 2.5s",    "done": false }
+    ],
+    "tags": ["E-Commerce", "Headless", "Migration"],
+    "lastActivityAt": "2025-05-08T14:22:00Z",
+    "revenueTrend": [18, 21, 22, 24, 28, 31, 30, 34, 38, 40, 43, 46]
+  },
+  {
+    "id": "proj-002",
+    "name": "Mobile Banking App — iOS",
+    "clientName": "FinSafe Bank",
+    "status": "On Hold",
+    "priority": "Critical",
+    "startDate": "2024-11-01",
+    "endDate": null,
+    "budget": 85000,
+    "spent": 41200,
+    "progress": 48,
+    "description": "Native iOS application for secure banking transactions. Paused pending an external compliance audit on session-token storage. Resume target: Q3 2025.",
+    "team": [
+      { "id": "u6", "name": "Noah Bennett",   "role": "iOS Lead",       "avatarColor": "8B5CF6" },
+      { "id": "u7", "name": "Aïcha Diallo",   "role": "Mobile Engineer","avatarColor": "F43F5E" },
+      { "id": "u8", "name": "Mateo Ricci",    "role": "Backend",        "avatarColor": "14B8A6" }
+    ],
+    "milestones": [
+      { "id": "m1", "title": "Onboarding + KYC flow",   "dueDate": "2025-01-15", "done": true  },
+      { "id": "m2", "title": "Biometric auth wired",    "dueDate": "2025-02-28", "done": true  },
+      { "id": "m3", "title": "Compliance audit cleared","dueDate": "2025-08-01", "done": false },
+      { "id": "m4", "title": "TestFlight beta",         "dueDate": "2025-09-15", "done": false }
+    ],
+    "tasks": [
+      { "id": "t1", "title": "Refactor token storage to Keychain only", "done": false },
+      { "id": "t2", "title": "Audit-trail documentation",                "done": false },
+      { "id": "t3", "title": "Penetration-test handoff",                 "done": false }
+    ],
+    "tags": ["iOS", "Fintech", "Compliance"],
+    "lastActivityAt": "2025-04-12T09:05:00Z",
+    "revenueTrend": [8, 9, 12, 14, 14, 14, 13, 13, 12, 12, 12, 12]
+  },
+  {
+    "id": "proj-003",
+    "name": "Corporate Intranet Portal",
+    "clientName": "Global Logistics Co.",
+    "status": "Completed",
+    "priority": "Medium",
+    "startDate": "2024-06-01",
+    "endDate": "2024-12-15",
+    "budget": 60000,
+    "spent": 58400,
+    "progress": 100,
+    "description": "Internal communication hub for 4,000 employees — document management, news feed, and HR integrations against the existing SAP backend.",
+    "team": [
+      { "id": "u9",  "name": "Maya Hartwell", "role": "Project Lead", "avatarColor": "F97316" },
+      { "id": "u10", "name": "Henrik Olsen",  "role": "Engineer",     "avatarColor": "3B82F6" }
+    ],
+    "milestones": [
+      { "id": "m1", "title": "Auth + SSO live",        "dueDate": "2024-07-15", "done": true },
+      { "id": "m2", "title": "News feed shipped",      "dueDate": "2024-09-30", "done": true },
+      { "id": "m3", "title": "HR module integration",  "dueDate": "2024-11-15", "done": true },
+      { "id": "m4", "title": "Production rollout",     "dueDate": "2024-12-15", "done": true }
+    ],
+    "tasks": [
+      { "id": "t1", "title": "Post-launch perf review", "done": true },
+      { "id": "t2", "title": "Documentation handover",  "done": true }
+    ],
+    "tags": ["Internal", "SSO", "SAP"],
+    "lastActivityAt": "2025-01-08T16:40:00Z",
+    "revenueTrend": [10, 12, 14, 16, 18, 19, 20, 22, 22, 23, 22, 22]
+  },
+  {
+    "id": "proj-004",
+    "name": "AI-Powered Analytics Dashboard",
+    "clientName": "DataFlow Systems",
+    "status": "Active",
+    "priority": "High",
+    "startDate": "2025-02-01",
+    "endDate": "2025-08-01",
+    "budget": 150000,
+    "spent": 71300,
+    "progress": 42,
+    "description": "Real-time data visualisation dashboard wired into a fine-tuned forecasting model. Ingests Kafka streams, surfaces anomaly alerts, and lets analysts iterate on hypotheses in a SQL playground.",
+    "team": [
+      { "id": "u11", "name": "Ana Beltran",  "role": "Tech Lead",    "avatarColor": "A855F7" },
+      { "id": "u12", "name": "Kai Yamamoto", "role": "ML Engineer",  "avatarColor": "0EA5E9" },
+      { "id": "u13", "name": "Lola Okafor",  "role": "Data Engineer","avatarColor": "DC2626" },
+      { "id": "u14", "name": "Theo Briand",  "role": "Frontend",     "avatarColor": "84CC16" }
+    ],
+    "milestones": [
+      { "id": "m1", "title": "Kafka ingestion baseline", "dueDate": "2025-03-01", "done": true  },
+      { "id": "m2", "title": "Anomaly model v1",         "dueDate": "2025-04-15", "done": true  },
+      { "id": "m3", "title": "Visualisation MVP",        "dueDate": "2025-06-01", "done": false },
+      { "id": "m4", "title": "SQL playground",           "dueDate": "2025-07-01", "done": false },
+      { "id": "m5", "title": "GA launch",                "dueDate": "2025-08-01", "done": false }
+    ],
+    "tasks": [
+      { "id": "t1", "title": "Schema registry contract",      "done": true  },
+      { "id": "t2", "title": "Real-time websocket layer",     "done": true  },
+      { "id": "t3", "title": "Model retrain cron",            "done": false },
+      { "id": "t4", "title": "Alert routing to Slack/PagerDuty","done": false }
+    ],
+    "tags": ["AI", "Realtime", "Kafka"],
+    "lastActivityAt": "2025-05-09T18:11:00Z",
+    "revenueTrend": [12, 14, 16, 18, 20, 24, 28, 30, 33, 36, 40, 42]
+  },
+  {
+    "id": "proj-005",
+    "name": "DTC Skincare Brand Launch",
+    "clientName": "Lumière Botanics",
+    "status": "Active",
+    "priority": "Medium",
+    "startDate": "2025-03-10",
+    "endDate": "2025-09-15",
+    "budget": 95000,
+    "spent": 28100,
+    "progress": 28,
+    "description": "Shopify Hydrogen storefront for a French DTC skincare launch — bilingual EN/FR, subscriptions via ReCharge, and a quiz-based product recommender for sensitive skin profiles.",
+    "team": [
+      { "id": "u15", "name": "Clémence Vidal", "role": "Creative Lead", "avatarColor": "E11D48" },
+      { "id": "u16", "name": "Hugo Marchand",  "role": "Shopify Dev",   "avatarColor": "22C55E" },
+      { "id": "u17", "name": "Sofia Russo",    "role": "Content",       "avatarColor": "F472B6" }
+    ],
+    "milestones": [
+      { "id": "m1", "title": "Brand system + tokens", "dueDate": "2025-04-15", "done": true  },
+      { "id": "m2", "title": "Product page templates","dueDate": "2025-06-01", "done": false },
+      { "id": "m3", "title": "Quiz recommender",      "dueDate": "2025-07-15", "done": false },
+      { "id": "m4", "title": "EN/FR translation pass","dueDate": "2025-08-15", "done": false },
+      { "id": "m5", "title": "Soft launch",           "dueDate": "2025-09-15", "done": false }
+    ],
+    "tasks": [
+      { "id": "t1", "title": "Tokens published to Tailwind", "done": true  },
+      { "id": "t2", "title": "Hydrogen routing scaffold",    "done": true  },
+      { "id": "t3", "title": "ReCharge subscription flow",   "done": false }
+    ],
+    "tags": ["Shopify", "DTC", "Bilingual"],
+    "lastActivityAt": "2025-05-07T10:30:00Z",
+    "revenueTrend": [0, 0, 0, 3, 6, 8, 12, 14, 18, 22, 26, 30]
+  },
+  {
+    "id": "proj-006",
+    "name": "HR Onboarding Workflow Automation",
+    "clientName": "Northwind Industries",
+    "status": "Active",
+    "priority": "Low",
+    "startDate": "2025-04-01",
+    "endDate": "2025-07-01",
+    "budget": 42000,
+    "spent": 11400,
+    "progress": 22,
+    "description": "Replace a 17-step manual onboarding workflow with a Temporal-backed automation. Connects Workday, Okta, Slack, and the internal laptop-provisioning queue.",
+    "team": [
+      { "id": "u18", "name": "Imran Chowdhury", "role": "Engineer",  "avatarColor": "0891B2" },
+      { "id": "u19", "name": "Elena Ruiz",      "role": "Engineer",  "avatarColor": "9333EA" }
+    ],
+    "milestones": [
+      { "id": "m1", "title": "Temporal POC",         "dueDate": "2025-04-30", "done": true  },
+      { "id": "m2", "title": "Workday connector",    "dueDate": "2025-05-31", "done": false },
+      { "id": "m3", "title": "End-to-end dry run",   "dueDate": "2025-06-15", "done": false },
+      { "id": "m4", "title": "Pilot with HR team",   "dueDate": "2025-07-01", "done": false }
+    ],
+    "tasks": [
+      { "id": "t1", "title": "Define state machine",    "done": true  },
+      { "id": "t2", "title": "Okta SCIM provisioning",  "done": false },
+      { "id": "t3", "title": "Slack DM templates",      "done": false }
+    ],
+    "tags": ["Internal", "Workflow", "Temporal"],
+    "lastActivityAt": "2025-05-06T15:50:00Z",
+    "revenueTrend": [0, 0, 0, 0, 0, 0, 0, 4, 6, 8, 11, 14]
+  },
+  {
+    "id": "proj-007",
+    "name": "Marketing Site — Headless WP → Astro",
+    "clientName": "Aperture Studios",
+    "status": "Completed",
+    "priority": "Low",
+    "startDate": "2024-10-15",
+    "endDate": "2025-02-20",
+    "budget": 28000,
+    "spent": 27600,
+    "progress": 100,
+    "description": "Migrated a slow WordPress marketing site to an Astro front-end with WP as the headless CMS. LCP went from 4.1s to 0.9s.",
+    "team": [
+      { "id": "u20", "name": "Jonas Holm",   "role": "Engineer", "avatarColor": "EAB308" },
+      { "id": "u21", "name": "Hana Kobayashi","role": "Design",  "avatarColor": "EC4899" }
+    ],
+    "milestones": [
+      { "id": "m1", "title": "Astro scaffold",         "dueDate": "2024-11-01", "done": true },
+      { "id": "m2", "title": "Content sync API",       "dueDate": "2024-12-15", "done": true },
+      { "id": "m3", "title": "SEO redirect map",       "dueDate": "2025-01-30", "done": true },
+      { "id": "m4", "title": "Production cutover",     "dueDate": "2025-02-20", "done": true }
+    ],
+    "tasks": [
+      { "id": "t1", "title": "Lighthouse > 95 across pages", "done": true },
+      { "id": "t2", "title": "Analytics dashboard handover", "done": true }
+    ],
+    "tags": ["Astro", "Migration", "Marketing"],
+    "lastActivityAt": "2025-02-22T12:00:00Z",
+    "revenueTrend": [4, 5, 6, 6, 7, 7, 8, 8, 8, 9, 9, 9]
+  },
+  {
+    "id": "proj-008",
+    "name": "Voice-First Customer Support Bot",
+    "clientName": "Helix Telecom",
+    "status": "Active",
+    "priority": "High",
+    "startDate": "2025-03-01",
+    "endDate": "2025-09-30",
+    "budget": 175000,
+    "spent": 62000,
+    "progress": 36,
+    "description": "Real-time voice agent for tier-1 telecom support. Whisper for ASR, a fine-tuned LLM for intent, ElevenLabs TTS, and a fallback bridge to human agents on confidence drop.",
+    "team": [
+      { "id": "u22", "name": "Adaeze Nwosu", "role": "Voice Lead",   "avatarColor": "6366F1" },
+      { "id": "u23", "name": "Lior Eshel",   "role": "ML Engineer",  "avatarColor": "EAB308" },
+      { "id": "u24", "name": "Pavel Sokolov", "role": "Engineer",    "avatarColor": "10B981" }
+    ],
+    "milestones": [
+      { "id": "m1", "title": "ASR latency < 400ms",     "dueDate": "2025-04-15", "done": true  },
+      { "id": "m2", "title": "Intent model v1",         "dueDate": "2025-05-30", "done": false },
+      { "id": "m3", "title": "Human handoff bridge",    "dueDate": "2025-07-15", "done": false },
+      { "id": "m4", "title": "Pilot — 5% of inbound",   "dueDate": "2025-09-30", "done": false }
+    ],
+    "tasks": [
+      { "id": "t1", "title": "Whisper deployment on GPU pool", "done": true  },
+      { "id": "t2", "title": "Voice activity detection tuning","done": true  },
+      { "id": "t3", "title": "PII redaction in transcripts",   "done": false }
+    ],
+    "tags": ["AI", "Voice", "Realtime"],
+    "lastActivityAt": "2025-05-09T11:20:00Z",
+    "revenueTrend": [0, 0, 0, 0, 0, 0, 4, 8, 14, 20, 28, 36]
+  },
+  {
+    "id": "proj-009",
+    "name": "Restaurant POS — Tablet Redesign",
+    "clientName": "Saffron Hospitality Group",
+    "status": "Completed",
+    "priority": "Medium",
+    "startDate": "2024-08-01",
+    "endDate": "2024-11-30",
+    "budget": 48000,
+    "spent": 47200,
+    "progress": 100,
+    "description": "iPad-first POS rewrite for a 40-location restaurant group — offline-first orders, kitchen display sync over local network, end-of-night cash reconciliation.",
+    "team": [
+      { "id": "u25", "name": "Talia Bauer", "role": "iOS Lead",   "avatarColor": "6366F1" },
+      { "id": "u26", "name": "Reza Ahmadi", "role": "Backend",     "avatarColor": "0EA5E9" }
+    ],
+    "milestones": [
+      { "id": "m1", "title": "Offline sync engine", "dueDate": "2024-09-15", "done": true },
+      { "id": "m2", "title": "KDS pairing",         "dueDate": "2024-10-15", "done": true },
+      { "id": "m3", "title": "Pilot in 3 venues",   "dueDate": "2024-11-15", "done": true },
+      { "id": "m4", "title": "Full rollout",        "dueDate": "2024-11-30", "done": true }
+    ],
+    "tasks": [
+      { "id": "t1", "title": "Staff training pack",       "done": true },
+      { "id": "t2", "title": "Stripe Terminal integration","done": true }
+    ],
+    "tags": ["iPad", "POS", "Offline"],
+    "lastActivityAt": "2024-12-04T09:15:00Z",
+    "revenueTrend": [12, 14, 16, 18, 18, 19, 19, 18, 18, 17, 17, 17]
+  },
+  {
+    "id": "proj-010",
+    "name": "Healthcare Patient Portal",
+    "clientName": "Meridian Health",
+    "status": "On Hold",
+    "priority": "Critical",
+    "startDate": "2025-01-05",
+    "endDate": null,
+    "budget": 220000,
+    "spent": 38800,
+    "progress": 18,
+    "description": "HIPAA-compliant patient portal — appointment booking, secure messaging with care teams, and integration with three EHR systems. On hold pending HITRUST scoping.",
+    "team": [
+      { "id": "u27", "name": "Dana Holloway", "role": "Project Lead","avatarColor": "F43F5E" },
+      { "id": "u28", "name": "Omar Yusuf",    "role": "Security Eng","avatarColor": "8B5CF6" }
+    ],
+    "milestones": [
+      { "id": "m1", "title": "HITRUST scoping",     "dueDate": "2025-08-01", "done": false },
+      { "id": "m2", "title": "EHR integration POC", "dueDate": "2025-09-15", "done": false },
+      { "id": "m3", "title": "Beta with 1 clinic",  "dueDate": "2025-11-01", "done": false }
+    ],
+    "tasks": [
+      { "id": "t1", "title": "BAA agreements drafted", "done": true  },
+      { "id": "t2", "title": "Threat model session",   "done": false }
+    ],
+    "tags": ["Healthcare", "HIPAA", "EHR"],
+    "lastActivityAt": "2025-04-02T13:40:00Z",
+    "revenueTrend": [0, 0, 0, 6, 8, 8, 8, 8, 8, 8, 8, 8]
+  },
+  {
+    "id": "proj-011",
+    "name": "B2B SaaS Onboarding Funnel A/B",
+    "clientName": "Cohort.io",
+    "status": "Active",
+    "priority": "Medium",
+    "startDate": "2025-04-20",
+    "endDate": "2025-06-20",
+    "budget": 22000,
+    "spent": 6800,
+    "progress": 32,
+    "description": "Two-month sprint to restructure a self-serve onboarding funnel — six A/B tests targeting day-1 activation rate, with PostHog instrumentation.",
+    "team": [
+      { "id": "u29", "name": "Mei Lin",     "role": "Growth Eng",  "avatarColor": "10B981" },
+      { "id": "u30", "name": "Aaron Vega",  "role": "Analytics",   "avatarColor": "F59E0B" }
+    ],
+    "milestones": [
+      { "id": "m1", "title": "PostHog instrumentation", "dueDate": "2025-05-05", "done": true  },
+      { "id": "m2", "title": "Test #1 ships",           "dueDate": "2025-05-15", "done": false },
+      { "id": "m3", "title": "Tests #2–4",              "dueDate": "2025-06-01", "done": false },
+      { "id": "m4", "title": "Final readout",           "dueDate": "2025-06-20", "done": false }
+    ],
+    "tasks": [
+      { "id": "t1", "title": "Define activation metric",     "done": true  },
+      { "id": "t2", "title": "Launch personalized onboarding","done": false }
+    ],
+    "tags": ["Growth", "A/B", "PostHog"],
+    "lastActivityAt": "2025-05-08T08:05:00Z",
+    "revenueTrend": [0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 8, 12]
+  },
+  {
+    "id": "proj-012",
+    "name": "Design System v2 — Tokens + Docs",
+    "clientName": "Internal — Rudratek",
+    "status": "Active",
+    "priority": "Medium",
+    "startDate": "2025-02-15",
+    "endDate": "2025-07-30",
+    "budget": 38000,
+    "spent": 19200,
+    "progress": 52,
+    "description": "Second-generation in-house design system. Tokens via Style Dictionary, components in Radix UI + Tailwind, docs site on Storybook + MDX, and a Figma library kept in sync via the Figma Tokens plugin.",
+    "team": [
+      { "id": "u31", "name": "Ines Caron",     "role": "Design Lead", "avatarColor": "6366F1" },
+      { "id": "u32", "name": "Marcus Becker",  "role": "Engineer",    "avatarColor": "DC2626" },
+      { "id": "u33", "name": "Suki Halloran",  "role": "Engineer",    "avatarColor": "06B6D4" }
+    ],
+    "milestones": [
+      { "id": "m1", "title": "Tokens v2 published",        "dueDate": "2025-03-30", "done": true  },
+      { "id": "m2", "title": "Form components shipped",    "dueDate": "2025-05-15", "done": true  },
+      { "id": "m3", "title": "Data display components",    "dueDate": "2025-06-15", "done": false },
+      { "id": "m4", "title": "Docs site GA",               "dueDate": "2025-07-30", "done": false }
+    ],
+    "tasks": [
+      { "id": "t1", "title": "Style Dictionary pipeline",  "done": true  },
+      { "id": "t2", "title": "Radix migration audit",      "done": true  },
+      { "id": "t3", "title": "Accessibility rules linted",  "done": false },
+      { "id": "t4", "title": "Storybook deploy on Vercel",  "done": false }
+    ],
+    "tags": ["Design System", "Internal", "Tokens"],
+    "lastActivityAt": "2025-05-09T16:30:00Z",
+    "revenueTrend": [4, 5, 6, 8, 10, 12, 14, 15, 17, 19, 21, 23]
+  }
 ]

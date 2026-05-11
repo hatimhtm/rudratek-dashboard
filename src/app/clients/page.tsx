@@ -3,77 +3,104 @@
 import projectsData from "@/data/projects.json";
 import { Project } from "@/types/project";
 import { formatCurrency } from "@/utils/format";
-import { Building2, Briefcase, Calendar } from "lucide-react";
+import { Building2, Briefcase, DollarSign, ArrowUpRight } from "lucide-react";
+import { ProgressBar } from "@/components/ui/ProgressBar";
 
 const projects: Project[] = projectsData as Project[];
 
-// Derive clients from projects
+interface ClientSummary {
+    name: string;
+    projects: Project[];
+    totalBudget: number;
+    totalSpent: number;
+    activeProjects: number;
+    avgProgress: number;
+}
+
 const clientsMap = projects.reduce((acc, project) => {
     if (!acc[project.clientName]) {
         acc[project.clientName] = {
             name: project.clientName,
             projects: [],
             totalBudget: 0,
-            activeProjects: 0
+            totalSpent: 0,
+            activeProjects: 0,
+            avgProgress: 0,
         };
     }
-    acc[project.clientName].projects.push(project);
-    acc[project.clientName].totalBudget += project.budget;
-    if (project.status === "Active") {
-        acc[project.clientName].activeProjects += 1;
-    }
+    const c = acc[project.clientName];
+    c.projects.push(project);
+    c.totalBudget += project.budget;
+    c.totalSpent += project.spent;
+    if (project.status === "Active") c.activeProjects += 1;
     return acc;
-}, {} as Record<string, { name: string, projects: Project[], totalBudget: number, activeProjects: number }>);
+}, {} as Record<string, ClientSummary>);
 
-const clients = Object.values(clientsMap);
+const clients = Object.values(clientsMap)
+    .map((c) => ({
+        ...c,
+        avgProgress: Math.round(c.projects.reduce((s, p) => s + p.progress, 0) / c.projects.length),
+    }))
+    .sort((a, b) => b.totalBudget - a.totalBudget);
 
 export default function ClientsPage() {
     return (
-        <main className="p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto space-y-8">
-            <div>
-                <h1 className="text-2xl font-bold text-neutral-900 dark:text-white sm:text-3xl tracking-tight">
+        <main className="p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto space-y-8 animate-fade-in-up">
+            <header>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-accent">
+                    Portfolio · {clients.length} clients
+                </p>
+                <h1 className="font-display text-3xl sm:text-4xl font-bold text-foreground mt-1">
                     Clients
                 </h1>
-                <p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">
-                    Manage your client relationships and portfolios.
+                <p className="mt-1 text-sm text-muted">
+                    Aggregated view across every engagement, sorted by total billed value.
                 </p>
-            </div>
+            </header>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
                 {clients.map((client) => (
-                    <div key={client.name} className="bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800 p-6 hover:shadow-lg transition-all group">
-                        <div className="flex justify-between items-start mb-4">
-                            <div className="w-12 h-12 rounded-lg bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center group-hover:bg-neutral-900 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-neutral-900 transition-colors">
-                                <Building2 className="w-6 h-6 text-neutral-500 dark:text-neutral-400 group-hover:text-current transition-colors" />
+                    <article key={client.name} className="card p-6 group hover:shadow-pop transition-all">
+                        <div className="flex justify-between items-start mb-5">
+                            <div className="w-11 h-11 rounded-xl bg-accent-soft text-accent flex items-center justify-center">
+                                <Building2 className="w-5 h-5" />
                             </div>
-                            <span className="bg-neutral-100 dark:bg-neutral-800 text-xs font-medium px-2.5 py-1 rounded-full text-neutral-600 dark:text-neutral-400">
-                                {client.projects.length} Projects
+                            <span className="text-[11px] font-mono text-muted">
+                                {client.projects.length} project{client.projects.length === 1 ? "" : "s"}
                             </span>
                         </div>
 
-                        <h3 className="text-lg font-bold text-neutral-900 dark:text-white mb-1">
+                        <h3 className="font-display text-lg font-semibold text-foreground leading-snug">
                             {client.name}
                         </h3>
 
-                        <div className="space-y-3 mt-4">
+                        <dl className="space-y-3 mt-5 pt-4 border-t border-[rgb(var(--border))]">
                             <div className="flex items-center justify-between text-sm">
-                                <span className="text-neutral-500 dark:text-neutral-400 flex items-center gap-2">
-                                    <Briefcase className="w-4 h-4" /> Active Works
-                                </span>
-                                <span className="font-medium text-neutral-900 dark:text-white">{client.activeProjects}</span>
+                                <dt className="text-muted flex items-center gap-2">
+                                    <Briefcase className="w-4 h-4" /> Active
+                                </dt>
+                                <dd className="font-mono text-foreground tabular-nums">{client.activeProjects}</dd>
                             </div>
                             <div className="flex items-center justify-between text-sm">
-                                <span className="text-neutral-500 dark:text-neutral-400 flex items-center gap-2">
-                                    <Calendar className="w-4 h-4" /> Total Value
-                                </span>
-                                <span className="font-medium text-neutral-900 dark:text-white">{formatCurrency(client.totalBudget)}</span>
+                                <dt className="text-muted flex items-center gap-2">
+                                    <DollarSign className="w-4 h-4" /> Total billed
+                                </dt>
+                                <dd className="font-mono text-foreground tabular-nums">{formatCurrency(client.totalBudget)}</dd>
                             </div>
-                        </div>
+                            <div>
+                                <div className="flex items-center justify-between text-sm mb-1.5">
+                                    <span className="text-muted">Avg progress</span>
+                                    <span className="font-mono text-foreground tabular-nums">{client.avgProgress}%</span>
+                                </div>
+                                <ProgressBar value={client.avgProgress} />
+                            </div>
+                        </dl>
 
-                        <button className="mt-4 w-full py-2 text-sm font-medium text-neutral-600 dark:text-neutral-300 border border-neutral-200 dark:border-neutral-700 rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors">
-                            View details
+                        <button className="mt-5 w-full py-2 text-sm font-medium text-foreground/80 hover:text-accent border border-[rgb(var(--border))] hover:border-accent rounded-lg transition-colors flex items-center justify-center gap-1.5 group/btn">
+                            View portfolio
+                            <ArrowUpRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                         </button>
-                    </div>
+                    </article>
                 ))}
             </div>
         </main>
