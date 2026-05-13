@@ -157,6 +157,14 @@ rudratek-dashboard/
 
 ---
 
+### `/// STATUS`
+
+🟢 **Live** — [hatimhtm.github.io/rudratek-dashboard](https://hatimhtm.github.io/rudratek-dashboard/)
+
+Auto-deploys to GitHub Pages on every push to `main` via `.github/workflows/deploy-pages.yml` (Next.js static export, `output: "export"`).
+
+---
+
 ### `/// LICENSE`
 
 MIT — drop the code into any project, swap the mock data for a real API, rebrand the sidebar logo. Just keep the copyright line.
